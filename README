@@ -1,0 +1,35 @@
+Mollie-Micropayment version 0.01
+================================
+
+This module allows you to use the micropayment service from Mollie.nl.
+It's design and usage is based on the original PHP class.
+
+For technical information please check out http://www.mollie.nl/.
+To see a online demo please check http://perl.pcc-online.net/Mollie-Micropayment/.
+You can also get the example script from there.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+	LWP::Simple
+	XML::Simple
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2007 by C. Kras
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.7 or,
+at your option, any later version of Perl 5 you may have available.
+
+
