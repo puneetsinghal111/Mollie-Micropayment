@@ -28,7 +28,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 ##################################################
@@ -172,7 +172,7 @@ sub payinfo {
 
 	my $xs  = XML::Simple->new();
 	my $xml = $xs->XMLin($response);
- 	#print Dumper($xml);
+
 	$self->{'servicenumber'} 	= exists($xml->{'item'}{'servicenumber'}) 	? $xml->{'item'}{'servicenumber'} 	: undef;
 	$self->{'paycode'} 			= exists($xml->{'item'}{'paycode'}) 		? $xml->{'item'}{'paycode'} 		: undef;
 	$self->{'amount'} 			= exists($xml->{'item'}{'amount'}) 			? $xml->{'item'}{'amount'} 			: 0;
@@ -182,7 +182,7 @@ sub payinfo {
 	$self->{'costpercall'} 		= exists($xml->{'item'}{'costpercall'}) 	? $xml->{'item'}{'costpercall'} 	: undef;
 	$self->{'currency'} 		= exists($xml->{'item'}{'currency'}) 		? $xml->{'item'}{'currency'} 		: undef;
 
-	return 1;	
+	return 1;
 }
 
 ##################################################
@@ -201,7 +201,7 @@ sub checkpayment {
 
 	my $xs  = XML::Simple->new();
 	my $xml = $xs->XMLin($response);
-	#print Dumper($xml);
+
 	
 	$self->{'payed'} 			= exists($xml->{'item'}{'payed'}) 			? $xml->{'item'}{'payed'} 			: "false";
 	$self->{'durationdone'} 	= exists($xml->{'item'}{'durationdone'}) 	? $xml->{'item'}{'durationdone'} 	: 0;
@@ -335,7 +335,7 @@ Set your country code. Default is 31, which is for the Netherlands. If a wrong c
 	France		33
 	Italy		39
 	Switserland	41
-	Oostenrijk	43
+	Austria		43
 
 =head3 servicenumber
 
@@ -390,7 +390,7 @@ None by default.
 
 =head1 SEE ALSO
 
-More info about Mollie.nl micrpayments can be fount at L<http://www.mollie.nl/informatie/micropayments/>
+More info about Mollie.nl micropayments can be fount at L<http://www.mollie.nl/informatie/micropayments/>
 
 You need an account at Mollie.nl to view the technical documentation. Please read it before you use this module.
 
