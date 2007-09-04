@@ -16,7 +16,7 @@ if(length($cgi->param("c")) > 0) {
 	$mollie->country($cgi->param("c"));
 }
 
-# Set payment amount to 0,50
+# Set payment amount
 $mollie->amount(1.30);
 
 

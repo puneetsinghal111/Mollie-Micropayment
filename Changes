@@ -1,5 +1,10 @@
 Revision history for Perl extension Mollie::Micropayment.
 
+0.03  Tue Sep 04 21:30:00 2007
+	- It seemed that some people couldn't install the previous 
+versions. So here is a new one, build under Linux.
+
+
 0.02  Wed Jul 18 22:49:00 2007
 	- Fixed a few typo's in documentation
 
